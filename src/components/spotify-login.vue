@@ -1,25 +1,42 @@
 <template>
   <div>
-    <button @click="login">Log in with spotify</button>
-    <p>{{ token }}</p>
+    <div v-if="this.$data.access_token">
+      <p> Welcome, {{ name }}</p>
+      <p>{{ this.$store.state.spotify.access_token }}</p>
+      <button @click="wipeData">Log out</button>
+    </div>
+    <div v-else>
+      <button @click="login">Log in with spotify</button>
+    </div>
+    <button @click="showToken">show my token</button>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   props: {
     clientId: String
   },
   data: function() {
-    const tokenParams = this.getHashParams() 
+    const tokenParams = this.getHashParams()
+    let name = 'moodscape'
+    this.$store.dispatch('loadUserData')
+    this.$store.dispatch('loadUserSongs')
+    console.log(this.$store.state.spotify) // eslint-disable-line no-console
+    if (tokenParams.access_token) {
+      this.$store.commit('setAccessToken', tokenParams.access_token)
+    }
     return {
-      token: tokenParams
+      token: tokenParams,
+      access_token: this.$store.state.spotify.access_token,
+      name
     }
   },
   methods: {
     login: async function(){
       const client_id = this.$props.clientId
-      var redirect_uri = 'http://localhost:8080/'; // Your redirect uri
+      var redirect_uri = window.location // Your redirect uri
 
       var state = this.generateRandomString(16);
 
@@ -52,9 +69,24 @@ export default {
       let hashParams = {}
       params.forEach(element => {
         hashParams[element[0]] = element[1]
-      });
-      this.$store.commit('setAccessToken', hashParams.access_token)
-      return params
+      })
+      return hashParams
+    },
+    getName: async function() {
+      debugger // eslint-disable-line no-debugger
+      const user = await axios.get('https://api.spotify.com/v1/me', {
+        headers: {
+          'Authorization': 'Bearer ' + this.$store.state.spotify.access_token
+        }
+      })
+      return user.data
+    },
+    showToken: function() {
+      alert(this.$store.state.spotify.access_token)
+    },
+    wipeData: function() {
+      this.$store.commit('resetState')
+      this.$data.access_token = ''
     }
   }
 }
