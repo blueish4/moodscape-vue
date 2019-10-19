@@ -1,17 +1,29 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <spotifyLogin clientId="fcbd8cb9249b4fb28c041a433bdccd07"/>
+    <div :v-if="songs">
+      <div v-for="s in songs" v-bind:key="s">
+        <song :id="s.id" />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import song from './components/song.vue'
+import spotifyLogin from './components/spotify-login.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    spotifyLogin,
+    song
+  },
+  data: function () {
+    return {
+      songs: this.$store.state.spotify.songs
+    }
   }
 }
 </script>
