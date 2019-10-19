@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="221px" height="231px" viewBox="-0.5 -0.5 221 231" content="&lt;mxfile host=&quot;www.draw.io&quot; modified=&quot;2019-10-18T22:30:39.126Z&quot; agent=&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36&quot; etag=&quot;Zu-0rUmHK_kmb9OQN8I1&quot; version=&quot;12.1.3&quot; type=&quot;device&quot; pages=&quot;1&quot;&gt;&lt;diagram id=&quot;5BOVaavOkPcU8iVxkdbD&quot; name=&quot;Page-1&quot;&gt;1ZddT4MwFIZ/DZcaoFS2S/eh3uzGmZh4YxpaaSdQUjoBf71lFBiDJS6BfSS7aN+eU8pz3gPMAPMwexYopiuOSWDYJs4MsDBs2zJt2yh+Js5LxbHNUvAFwzqoEdbsl1SZWt0yTJJWoOQ8kCxuix6PIuLJloaE4Gk77IsH7avGyCcdYe2hoKu+MyxpqU6g2egvhPm0urJl6pUQVcFaSCjCPN2TwNIAc8G5LEdhNidBAa/iUuY9HVmtDyZIJP+TQD/F94bFJH9crJzozfmQr5s7XZ0fFGz1DevDyrwioHZRsNVkllImyTpGXrGSqnorjcowUDNLDTETqgKMR2qe8G1x+zO9PRGSZEfPbdU0lI0ID4kUuQrRCcCEZYp2kKt5pk05qmrQ/UpU3JF2gF/v3EBSA83pBGbg9phZk0tDc0aClpJEDsOsbtSKGYQdZjWffWhwLGbw6pmBq2P2MC4zwSXSigMH8h046FW726vnZejeHMPO8256aYaTkRhGXOxeEmMY0T2ACN37bjv3vjYsOBLG6e1hBE77mdhjxfMytAZkOITNpgc2c/ps5vYgck9vVjVtvrB3a3v/U8DyDw==&lt;/diagram&gt;&lt;/mxfile&gt;" style="background-color: rgb(255, 255, 255);">
+	<defs />
+	<g>
+		<ellipse cx="110" cy="60" rx="60" ry="25" fill="#00108E" stroke="#000000" transform="rotate(90,110,60)" pointer-events="none" />
+		<ellipse cx="110" cy="170" rx="60" ry="25" fill="#00108E" stroke="#000000" transform="rotate(90,110,170)" pointer-events="none" />
+		<ellipse cx="60" cy="110" rx="60" ry="25" fill="#00108E" stroke="#000000" transform="rotate(180,60,110)" pointer-events="none" />
+		<ellipse cx="160" cy="110" rx="60" ry="25" fill="#00108E" stroke="#000000" transform="rotate(180,160,110)" pointer-events="none" />
+		<ellipse cx="75" cy="75" rx="60" ry="25" fill="#187DAF" stroke="#000000" transform="rotate(225,75,75)" pointer-events="none" />
+		<ellipse cx="145" cy="145" rx="60" ry="25" fill="#187DAF" stroke="#000000" transform="rotate(225,145,145)" pointer-events="none" />
+		<ellipse cx="80" cy="145" rx="57.5" ry="25" fill="#187DAF" stroke="#000000" transform="rotate(315,80,145)" pointer-events="none" />
+		<ellipse cx="145" cy="77.5" rx="57.5" ry="25" fill="#187DAF" stroke="#000000" transform="rotate(315,145,77.5)" pointer-events="none" />
+		<ellipse cx="110" cy="112.5" rx="35" ry="35" fill="#75B9BE" stroke="#000000" pointer-events="none" />
+	</g>
+</svg>
