@@ -117,7 +117,6 @@ export default {
       pointyness = 'smooth'
     }
     const sourceFile = pointyness+' '+temperature
-    console.log(fromStore) //eslint-disable-line no-console
     return {
       name: fromStore.name,
       valence: fromStore.valence,

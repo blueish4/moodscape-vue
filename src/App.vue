@@ -3,7 +3,7 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <spotifyLogin clientId="fcbd8cb9249b4fb28c041a433bdccd07"/>
     <div :v-if="songs">
-      <div v-for="s in songs" v-bind:key="s">
+      <div v-for="s in songs" v-bind:key="s" id="flowers">
         <song :id="s.id" />
       </div>
     </div>
@@ -36,5 +36,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+#flowers {
+  display: inline-block
 }
 </style>
