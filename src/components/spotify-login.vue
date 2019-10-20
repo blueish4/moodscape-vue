@@ -2,13 +2,11 @@
   <div>
     <div v-if="this.access_token">
       <p> Welcome, {{ name }}</p>
-      <p>{{ this.access_token }}</p>
       <button @click="wipeData">Log out</button>
     </div>
     <div v-else>
       <button @click="login">Log in with spotify</button>
     </div>
-    <button @click="showToken">show my token</button>
   </div>
 </template>
 
