@@ -70,18 +70,6 @@ export const spotify = {
                 }
                 commit('insertSong', songSubset)
             })
-        },
-        async loadSongs({state}) {
-            state.songs.forEach(async song => {
-                const { data } = await axios.get('https://api.spotify.com/v1/audio-features/'+song.id, {
-                    headers: {
-                        'Authorization': 'Bearer ' + state.access_token
-                    }
-                })
-                song.energy = data.energy
-                song.valence = data.valence
-            })
-
         }
     }
 }
