@@ -1,25 +1,28 @@
 <template>
-    <div id="app">
-        <img alt="Vue logo" src="./assets/logo.png">
-        <spotifyLogin clientId="fcbd8cb9249b4fb28c041a433bdccd07" />
-        <div :v-if="songs">
-            <div v-for="s in songs" v-bind:key="s.id" class="flowers">
-                <song :id="s.id" />
-            </div>
-        </div>
+  <div id="app">
+    <img alt="Vue logo" src="./assets/logo.png">
+    <sky/>
+    <spotifyLogin clientId="fcbd8cb9249b4fb28c041a433bdccd07"/>
+    <div :v-if="songs">
+      <div v-for="s in songs" v-bind:key="s.id" class="flowers">
+        <song :id="s.id" />
+      </div>
     </div>
- 
+
+  </div>
 </template>
 
 <script>
 import song from './components/song.vue'
 import spotifyLogin from './components/spotify-login.vue'
+import sky from './components/sky.vue'
 
 export default {
   name: 'app',
   components: {
     spotifyLogin,
-    song
+    song,
+    sky
   },
   computed: {
     songs: function() {
