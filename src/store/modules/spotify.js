@@ -65,6 +65,7 @@ export const spotify = {
                     playedAt: song.played_at,
                     id: song.track.id,
                     name: song.track.name,
+                    artist: song.track.artists[0].name,
                     energy: data.energy,
                     valence: data.valence
                 }
