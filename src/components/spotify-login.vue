@@ -2,10 +2,10 @@
   <div>
     <div v-if="this.access_token">
       <p> Welcome, {{ name }}</p>
-      <button @click="wipeData">Log out</button>
+      <button class="button login" @click="wipeData">Log out</button>
     </div>
     <div v-else>
-      <button @click="login">Log in with spotify</button>
+      <button class="button login" @click="login">Log in with spotify</button>
     </div>
   </div>
 </template>
@@ -93,5 +93,31 @@ export default {
 </script>
 
 <style>
+    .button {
+        background-color: #1DB954;
+        border: 4px solid #000000;
+        border-radius: 10px;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+    }
 
+    .login {
+        background-color: #1DB954;
+        color: black;
+        border: 4px solid #000000;
+    }
+
+    .login:hover {
+            background-color: #000000;
+            color: white;
+            border: 4px solid #1DB954;
+     }
 </style>
