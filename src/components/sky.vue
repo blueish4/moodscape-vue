@@ -1,40 +1,59 @@
 <template>
-    <div>
-        <svg if="sourceFile==='sunset'" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    <div style="border-radius:60px">
+        <svg if="sourceFile==='sunset'"
+             xmlns:dc="http://purl.org/dc/elements/1.1/"
              xmlns:cc="http://creativecommons.org/ns#"
              xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
              xmlns:svg="http://www.w3.org/2000/svg"
              xmlns="http://www.w3.org/2000/svg"
              xmlns:xlink="http://www.w3.org/1999/xlink"
-             id="svg3759"
-             version="1.1"
-             viewBox="0 0 285.74999 79.375002"
+             width="1080"
              height="300"
-             width="1080" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="http://creativecommons.org/ns# ">
+             viewBox="0 0 285.74999 79.375002"
+             version="1.1"
+             id="svg3759">
             <defs
                     id="defs3753">
                 <linearGradient
-                        id="linearGradient3993">
+                        id="linearGradient3792">
                     <stop
-                            id="stop3989"
+                            id="stop3788"
                             offset="0"
-                            style="stop-color:#ff7f2a;stop-opacity:1"/>
+                            style="stop-color:#ff2a2a;stop-opacity:1" />
                     <stop
-                            id="stop3991"
+                            id="stop3790"
                             offset="1"
-                            style="stop-color:#d40000;stop-opacity:1"/>
+                            style="stop-color:#ff6600;stop-opacity:1" />
                 </linearGradient>
                 <linearGradient
-                        spreadMethod="pad"
-                        gradientTransform="matrix(1,0,0,1.0082952,0,-2.4636884)"
-                        gradientUnits="userSpaceOnUse"
-                        y2="290.85278"
-                        x2="145.6619"
-                        y1="222.16451"
-                        x1="145.6619"
+                        id="linearGradient3993">
+                    <stop
+                            style="stop-color:#ff7f2a;stop-opacity:1"
+                            offset="0"
+                            id="stop3989" />
+                    <stop
+                            style="stop-color:#d40000;stop-opacity:1"
+                            offset="1"
+                            id="stop3991" />
+                </linearGradient>
+                <linearGradient
+                        xlink:href="#linearGradient3993"
                         id="linearGradient3995"
-                        xlink:href="#linearGradient3993"/>
+                        x1="145.6619"
+                        y1="222.16451"
+                        x2="145.6619"
+                        y2="290.85278"
+                        gradientUnits="userSpaceOnUse"
+                        gradientTransform="matrix(1,0,0,1.0082952,0,-2.4636884)"
+                        spreadMethod="pad" />
+                <linearGradient
+                        gradientUnits="userSpaceOnUse"
+                        y2="65.547401"
+                        x2="141.73286"
+                        y1="28.212891"
+                        x1="140.35011"
+                        id="linearGradient3794"
+                        xlink:href="#linearGradient3792" />
             </defs>
             <metadata
                     id="metadata3756">
@@ -43,22 +62,18 @@
                             rdf:about="">
                         <dc:format>image/svg+xml</dc:format>
                         <dc:type
-                                rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+                                rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
                         <dc:title></dc:title>
                     </cc:Work>
                 </rdf:RDF>
             </metadata>
-            <g
-                    transform="translate(0,-217.62498)"
-                    id="layer1">
-                <rect
-                        y="217.50143"
-                        x="0.53453904"
-                        height="79.498543"
-                        width="285.71112"
-                        id="rect3918"
-                        style="fill:url(#linearGradient3995);fill-opacity:1;stroke:#37abc8;stroke-width:0.26567844"/>
-            </g>
+            <ellipse
+                    ry="27.232403"
+                    rx="142.48572"
+                    cy="40.63131"
+                    cx="142.75278"
+                    id="path3784"
+                    style="fill:url(#linearGradient3794);fill-opacity:1;stroke:#37abc8;stroke-width:0.30983189" />
         </svg>
 
 
