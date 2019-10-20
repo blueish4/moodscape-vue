@@ -4,12 +4,7 @@ export const spotify = {
     state: {
         user: {},
         access_token: '',
-        songs: [{
-            id: 'rlihwslfijfnjwjiklwsehgolwafhi',
-            name: 'test song',
-            energy: 0.4,
-            valence: 0.7
-        }]
+        songs: [{}]
     },
     mutations: {
         setAccessToken (state, newToken) {
@@ -25,12 +20,7 @@ export const spotify = {
         resetState(state) {
             state.user = {}
             state.access_token = ''
-            state.songs = [{
-                id: 'rlihwslfijfnjwjiklwsehgolwafhi',
-                name: 'test song',
-                energy: 0.4,
-                valence: 0.7
-            }]
+            state.songs = [{}]
         },
         wipeSongs(state) {
             state.songs = []
