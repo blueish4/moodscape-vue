@@ -1,13 +1,16 @@
 <template>
-  <div>
-    <div v-if="this.access_token">
-      <p> Welcome, {{ name }}</p>
-      <button class="button login" @click="wipeData">Log out</button>
+
+    <div>
+        <div v-if="this.access_token">
+            <p> Welcome, {{ name }}</p>
+            <button class="button login" @click="wipeData">Log out</button>
+        </div>
+        <div v-else>
+            <button class="button login" @click="login">Log in with spotify</button>
+        </div>
     </div>
-    <div v-else>
-      <button class="button login" @click="login">Log in with spotify</button>
-    </div>
-  </div>
+
+
 </template>
 
 <script>
@@ -122,4 +125,6 @@ export default {
             color: white;
             border: 4px solid #1DB954;
      }
+
+
 </style>
