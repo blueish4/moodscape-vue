@@ -4,7 +4,7 @@
     <spotifyLogin clientId="fcbd8cb9249b4fb28c041a433bdccd07"/>
     <div :v-if="songs">
       <div v-for="s in songs" v-bind:key="s.id" class="flowers">
-        <song :id="s.id" />
+        <song :id="s.id" dimension="81px"/>
       </div>
     </div>
   </div>
