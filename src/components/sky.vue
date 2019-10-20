@@ -1,6 +1,6 @@
 <template>
     <div>
-        <svg v-if="sourceFile==='sunset'" xmlns:dc="http://purl.org/dc/elements/1.1/"
+        <svg if="sourceFile==='sunset'" xmlns:dc="http://purl.org/dc/elements/1.1/"
              xmlns:cc="http://creativecommons.org/ns#"
              xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
              xmlns:svg="http://www.w3.org/2000/svg"
@@ -332,6 +332,7 @@
             if(sunsetNo < middayNo && sunsetNo < middayNo && middayNo > nightNo) {
                 // eslint-disable-next-line no-console
                 console.log("Yada", "mid-day")
+
                 const sourceFile = "mid-day"
                 return {sourceFile }
 
