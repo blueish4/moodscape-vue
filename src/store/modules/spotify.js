@@ -62,7 +62,7 @@ export const spotify = {
                     }
                 })
                 const songSubset = {
-                    playedAt: song.playedAt,
+                    playedAt: song.played_at,
                     id: song.track.id,
                     name: song.track.name,
                     energy: data.energy,
