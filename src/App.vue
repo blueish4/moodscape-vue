@@ -49,6 +49,9 @@ export default {
         background-image: linear-gradient(#87ceeb, #1DB954);
         background-size: cover;
     }
+    #app * {
+      max-width: 100%;
+    }
     .flowers {
       display: inline-block
     }
