@@ -48,7 +48,7 @@ export default {
   methods: {
     login: async function(){
       const client_id = this.$props.clientId
-      var redirect_uri = window.location // Your redirect uri
+      const redirect_uri = window.location.toString().split('#')[0] // Your redirect uri
 
       var state = this.generateRandomString(16);
 
