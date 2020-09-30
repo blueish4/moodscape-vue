@@ -1,5 +1,3 @@
-import axios from "axios"
-
 export const spotify = {
     state: {
         user: {},
@@ -12,7 +10,9 @@ export const spotify = {
                 state.access_token = newToken
         },
         insertSong(state, newSong) {
-            state.songs.push(newSong)
+            if (!state.songs.some(e => e.id === newSong.id)) {
+                state.songs.push(newSong)
+            }
         },
         setUser(state, newUser) {
             state.user = newUser
@@ -28,29 +28,27 @@ export const spotify = {
     },
     actions: {
         async loadUserData({ commit, state }) {
-            const data = await axios.get('https://api.spotify.com/v1/me', {
+            const resp = await fetch('https://api.spotify.com/v1/me', {
                 headers: {
                 'Authorization': 'Bearer ' + state.access_token
                 }
             })
-            commit('setUser', data.data)
+            commit('setUser', await resp.json())
         },
         async loadUserSongs({ state, commit }) {
-            const data = await axios.get('https://api.spotify.com/v1/me/player/recently-played', {
+            const resp = await fetch('https://api.spotify.com/v1/me/player/recently-played?limit=50', {
                 headers: {
                     'Authorization': 'Bearer ' + state.access_token
-                },
-                params: {
-                    'limit': 50
                 }
             })
             commit('wipeSongs')
-            data.data.items.forEach(async song => {
-                const { data } = await axios.get('https://api.spotify.com/v1/audio-features/'+song.track.id, {
+            ;(await resp.json()).items.forEach(async song => {
+                const features = await fetch('https://api.spotify.com/v1/audio-features/'+song.track.id, {
                     headers: {
                         'Authorization': 'Bearer ' + state.access_token
                     }
                 })
+                const data = await features.json()
                 const songSubset = {
                     playedAt: song.played_at.substring(14,22),
                     id: song.track.id,
